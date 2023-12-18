@@ -51,7 +51,12 @@ const loop = setInterval(() => {
 }, 10);
 
 
-document.addEventListener("keydown", pulo);
+document.addEventListener("keydown", function(event) {
+  if (event.key === " ") { 
+    event.preventDefault();
+    pulo();
+  }
+});
 
 
 function obterParametroUrl(nome) {
@@ -70,5 +75,5 @@ function voltarParaIndex() {
 }
 
 function recomecarJogo() {
-  window.location.href = "game.html";
+  window.location.href = "game.html?nome=" + nomeJogador;
 }

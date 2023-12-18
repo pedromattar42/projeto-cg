@@ -21,9 +21,12 @@
             var nome = document.getElementById("nomeInput").value;
             if (nome.trim() !== "") {
                 window.location.href = "game.html?nome=" + encodeURIComponent(nome);
+            } else {
+                alert("Por favor, digite seu nome antes de iniciar o jogo.");
             }
         }
     </script>
+    
 </body>
 
 </html>
