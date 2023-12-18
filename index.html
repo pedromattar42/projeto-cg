@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario - Jogo</title>
+    <link rel="stylesheet" href="css/tela-inicial.css">
+</head>
+
+<body>
+    <div class="press-start">
+        <h1>Super Mario Bros.</h1>
+        <p style="color: #fff; font-family: Arial, Helvetica, sans-serif; text-align: center; font-size: 0.8rem;">Pressione a tecla de espaço para pular. Você ganha ao atingir 10.000 pontos.</p>
+        <input type="text" id="nomeInput" placeholder="Digite seu nome">
+        <button class="button" onclick="redirectToGame()">PRESS TO START</button>
+    </div>
+
+    <script>
+        function redirectToGame() {
+            var nome = document.getElementById("nomeInput").value;
+            if (nome.trim() !== "") {
+                window.location.href = "game.html?nome=" + encodeURIComponent(nome);
+            }
+        }
+    </script>
+</body>
+
+</html>

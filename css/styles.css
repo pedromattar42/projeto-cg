@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "SuperMario256";
+  src: url("../fonts/SuperMario256.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.board-principal {
+  width: 80%;
+  height: 600px;
+  margin: 0 auto;
+  position: relative;
+  border-bottom: 20px solid green;
+  overflow: hidden;
+  background: linear-gradient(#87ceeb, #e0f6ff);
+}
+
+.obstaculo {
+  position: absolute;
+  bottom: 0;
+  width: 80px;
+  animation: animacao-cano-verde 1.5s infinite linear;
+}
+
+.nuvens {
+  width: 550px;
+  position: absolute;
+  animation: animacao-nuvens 10s infinite linear;
+}
+
+.mario {
+  width: 150px;
+  position: absolute;
+  bottom: 0;
+}
+
+.pular {
+  animation: pulo 500ms ease-out;
+}
+
+@keyframes animacao-cano-verde {
+  from {
+    right: 0;
+  }
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes pulo {
+  0% {
+    bottom: 0;
+  }
+  40% {
+    bottom: 180px;
+  }
+  50% {
+    bottom: 180px;
+  }
+  60% {
+    bottom: 180px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes animacao-nuvens {
+  from {
+    right: -550px;
+  }
+  to {
+    right: 100%;
+  }
+}
+
+#telaGameOver {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+
+#voltarBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.restartButton {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}

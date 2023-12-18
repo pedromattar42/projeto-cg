@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario - Jogo</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="board-principal">
+        <h2 style="font-family: Arial, Helvetica, sans-serif; color: red ;" id="nomeJogador"></h2>
+        <div style="font-family: Arial, Helvetica, sans-serif; color: red ;" id="pontuacao">Pontuação: 0</div>
+        <div id="telaGameOver">
+            <h3 style="font-family: SuperMario256; color: #fff;">Game Over</h3>
+            <p style="font-family: SuperMario256; color: #fff;">Desempenho final: <span id="pontuacaoFinal">0</span></p>
+            <button id="recomecarBtn" style="margin-top: 1rem;" class="restartButton" onclick="recomecarJogo()">Recomeçar Jogo</button>
+        </div>
+
+        <button id="voltarBtn" onclick="voltarParaIndex()">Voltar para a tela inicial</button>
+
+        <img class="nuvens" src="images/clouds.png">
+        <img class="mario" src="images/mario.gif">
+        <img class="obstaculo" src="images/pipe.png">
+    </div>
+</body>
+<script src="js/script.js"></script>
+
+</html>

@@ -1,0 +1,123 @@
+@font-face {
+  font-family: "SuperMario256";
+  src: url("../fonts/SuperMario256.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/Mario-Computer-Backgrounds.png");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+h1 {
+  font-family: "SuperMario256";
+  color: white;
+}
+
+.press-start {
+  display: flex;
+  background-color: #a27230;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 40%;
+}
+
+.button {
+  margin-top: 2rem;
+}
+
+input {
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 16px;
+  width: 50%;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+button {
+  font-family: "SuperMario256";
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-size: 16px;
+  background-color: red;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  animation: bounce 1s infinite alternate;
+  appearance: button;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter 0.2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 50%;
+}
+
+button:after {
+  background-clip: padding-box;
+  background-color: red;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+button:main,
+button:focus {
+  user-select: auto;
+}
+
+button:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+button:disabled {
+  cursor: auto;
+}
+
+button:active {
+  border-width: 4px 0 0;
+  background: none;
+}
+
